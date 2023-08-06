@@ -1,9 +1,10 @@
+import math
 class Punto:
 
-    def __init__(self):
+    def __init__(self, x, y):
 
-        self.x = 0
-        self.y = 0
+        self.x = x
+        self.y = y
 
     def mostrar(self):
         print("la coordenada x es ", self.x)
@@ -13,4 +14,6 @@ class Punto:
         self.x = new_x
         self.y = new_y
     
-    def calcular_distancia(self)#????
+    def calcular_distancia(self, punto_b):
+        distancia = math.sqrt((punto_b.x -self.x)**2 + (punto_b.y - self.y)**2)
+        return distancia
