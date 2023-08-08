@@ -1,10 +1,8 @@
+from __future__ import annotations
+
 import math
 
 class Punto:
-
-    def __init__(self):
-        self.x = 0
-        self.y = 0
 
     def __init__(self, x, y):
         self.x = x
@@ -18,6 +16,6 @@ class Punto:
         self.x = new_x
         self.y = new_y
     
-    def calcular_distancia(self, punto_b):
+    def calcular_distancia(self, punto_b:Punto):
         distancia = math.sqrt((punto_b.x -self.x)**2 + (punto_b.y - self.y)**2)
         return distancia
